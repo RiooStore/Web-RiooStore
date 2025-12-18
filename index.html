@@ -21,23 +21,46 @@
 .container {
   width: 100%;
   max-width: 420px;
-  padding: 25px;
+  padding: 30px 25px;
   background: #161616;
-  border-radius: 18px;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
   text-align: center;
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #25D366, #1ebe5d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0 auto 15px;
 }
 
 .brand {
-  font-size: 32px;
+  font-size: 30px;
   font-weight: bold;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .desc {
   font-size: 14px;
   color: #b5b5b5;
-  margin-bottom: 25px;
+  margin-bottom: 22px;
+}
+
+.links {
+  margin-top: 10px;
 }
 
 .btn {
@@ -45,22 +68,23 @@
   width: 100%;
   padding: 14px;
   margin-bottom: 14px;
-  background: linear-gradient(135deg, #25D366, #1ebe5d);
+  background: #242424;
   color: #ffffff;
   text-decoration: none;
-  border-radius: 12px;
+  border-radius: 14px;
   font-weight: 600;
+  border: 1px solid #333;
   transition: 0.3s ease;
 }
 
-.btn:hover {
-  transform: scale(1.03);
-  opacity: 0.9;
+.btn.primary {
+  background: linear-gradient(135deg, #25D366, #1ebe5d);
+  border: none;
 }
 
-.btn.secondary {
-  background: #242424;
-  border: 1px solid #333;
+.btn:hover {
+  transform: scale(1.04);
+  opacity: 0.95;
 }
 
 footer {
@@ -73,12 +97,18 @@ footer {
 </head>
 <body>
   <div class="container">
-    <div class="brand">RiooStore</div>
-    <div class="desc">Stay Amanah And Trusted</div><a class="btn" href="https://wa.me/6282261652010" target="_blank">Hubungi via WhatsApp</a>
-<a class="btn secondary" href="#">Lihat Produk (Soon)</a>
+    <div class="avatar">R</div><div class="brand">RiooStore</div>
+<div class="desc">Stay Amanah And Trusted</div>
+
+<div class="links">
+  <a class="btn primary" href="https://wa.me/6282261652010" target="_blank">WhatsApp</a>
+  <a class="btn" href="#">Project / Bot</a>
+  <a class="btn" href="https://github.com/" target="_blank">GitHub</a>
+  <a class="btn" href="https://wa.me/6282261652010" target="_blank">Owner</a>
+</div>
 
 <footer>
-  © 2025 RiooStore • Powered by Vercel
+  © 2025 RiooStore • Road To 900 Testi
 </footer>
 
   </div>
