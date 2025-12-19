@@ -118,7 +118,7 @@
       height: 400px; /* tinggi banner */
       border-radius: 22px;
       border: 1px solid rgba(255,255,255,0.1);
-      object-fit: cover; /* penuh area, video bisa terpotong sedikit */
+      object-fit: cover;
       display: block;
     }
 
@@ -260,7 +260,7 @@
   <section class="hero-section">
     <h1 class="section-title">RiooStore <span class="badge">Official</span></h1>
     <div class="banner">
-      <video autoplay loop playsinline controls>
+      <video id="bannerVideo" autoplay muted loop playsinline controls>
         <source src="banner.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
@@ -327,9 +327,19 @@
   </footer>
 
   <script>
+    // Accordion slide
     document.querySelectorAll('.accordion').forEach(card => {
       card.addEventListener('click', () => {
         card.classList.toggle('active');
+      });
+    });
+
+    // Autoplay video dengan audio (jika browser mengizinkan)
+    const vid = document.getElementById('bannerVideo');
+    window.addEventListener('load', () => {
+      vid.muted = false; // coba nyalakan audio
+      vid.play().catch(() => {
+        console.log('Autoplay audio diblokir, mungkin perlu klik play manual di browser');
       });
     });
   </script>
