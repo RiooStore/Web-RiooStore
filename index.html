@@ -197,6 +197,7 @@
       padding: 22px;
       border: 1px solid rgba(255,255,255,0.1);
       cursor: pointer;
+      margin-bottom: 16px;
     }
 
     .card-header {
@@ -210,18 +211,18 @@
       font-size: 14px;
     }
 
+    /* ===== ANIMASI SLIDE ACCORDION ===== */
     .card-content {
-      margin-top: 16px;
-      display: none;
+      max-height: 0;
+      overflow: hidden;
       line-height: 1.6;
-    }
-
-    .card.accordion:hover {
-      border-color: #25D366;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+      padding: 0 0;
     }
 
     .card.accordion.active .card-content {
-      display: block;
+      max-height: 500px; /* cukup besar untuk semua konten */
+      padding: 16px 0;
     }
 
     /* ===== FOOTER ===== */
