@@ -187,28 +187,43 @@
     }
 
     /* ===== CARD MENU ===== */
-    .card-container {
-      max-width: 1000px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      padding: 0 20px;
-    }
+.card-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 20px;
+}
 
-    .card {
-      background: rgba(255,255,255,0.05);
-      border-radius: 18px;
-      padding: 24px;
-      text-align: center;
-      border: 1px solid rgba(255,255,255,0.1);
-      transition: 0.25s;
-    }
+.card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 18px;
+  padding: 22px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
 
-    .card:hover {
-      transform: translateY(-6px);
-      border-color: #25D366;
-    }
+.card-header {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.card-sub {
+  margin-top: 6px;
+  opacity: 0.75;
+  font-size: 14px;
+}
+
+.card-content {
+  margin-top: 16px;
+  display: none;
+  line-height: 1.6;
+}
+
+.card.accordion:hover {
+  border-color: #25D366;
+}
+
+.card.accordion.active .card-content {
+  display: block;
+}
 
     /* ===== FOOTER ===== */
     footer {
@@ -247,21 +262,37 @@
   WhatsApp Rioo
 </a>
   </div>
-</div><hr class="divider" />  <!-- CARD MENU -->  <div class="card-container">
-    <div class="card">
-      <h3>WhatsApp Bot</h3>
-      <p>Layanan bot otomatis</p>
+</div><hr class="divider" />  <!-- CARD MENU -->  <div class="card-container">  <div class="card accordion">
+    <div class="card-header">Testimoni</div>
+    <div class="card-sub">Road To 900 Testi</div>
+    <div class="card-content">
+      <p>• Big Testi Mc 700Inc ( Capitano Moby SaB )</p>
+      <p>• Big Direct 230K ( Secret Tumbal 100 Fish It )</p>
+      <p>• Big Sisp Rioo 400K ( Akun Rata Kanan Fish It )</p>
     </div>
-    <div class="card">
-      <h3>Testimoni</h3>
-      <p>Road To 900 Testi</p>
+  </div>  <div class="card accordion">
+    <div class="card-header">List Rioo</div>
+    <div class="card-sub">Rioo Menyediakan</div>
+    <div class="card-content">
+      <p>• Jasa Mc / Mm</p>
+      <p>• Jasa Joki All Game</p>
+      <p>• Item GaG / PvB / SaB / Fish It</p>
     </div>
-    <div class="card">
-      <h3>Contact Admin</h3>
-      <p>Fast Response</p>
+  </div></div>
+    <div class="card-sub">Road To 900 Testi</div>
+    <div class="card-content">
+      <p>Big Testi Mc 700Inc ( Capitano Moby SaB )</p>
+      <p>Big Direct 230K ( Secret Tumbal 100 Fish It )</p>
+      <p>Big Sisp Rioo 400K ( Akun Rata Kanan Fish It )</p>
     </div>
-  </div>  <hr class="divider" />  <!-- FOOTER -->  <footer>
+  </div></div><hr class="divider" />  <!-- FOOTER -->  <footer>
     <p>Supported By</p>
     <strong>RiooStore || Road To 900 Testi</strong>
-  </footer></body>
+  </footer><script>
+  document.querySelectorAll('.accordion').forEach(card => {
+    card.addEventListener('click', () => {
+      card.classList.toggle('active');
+    });
+  });
+</script></body>
 </html>
