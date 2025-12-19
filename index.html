@@ -46,19 +46,18 @@
     .social-wrapper {display:flex; flex-direction:column; align-items:center; gap:18px;}
     .social-top {display:flex; gap:18px; flex-wrap:wrap; justify-content:center;}
     .social-bottom {display:flex; justify-content:center;}
-    .social-btn {padding:14px 26px; border-radius:14px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); color:#fff; text-decoration:none; font-weight:700; display:flex; align-items:center; gap:10px; transition:0.25s; -webkit-tap-highlight-color: transparent; outline:none;}
-    .social-btn:hover, .social-btn.active {background:#25D366; color:#000; transform: scale(1.05); box-shadow:0 4px 15px rgba(0,255,100,0.3);}
-    .social-btn:active {background:#25D366; color:#000; transform:none; box-shadow:none;}
-    .social-btn.primary {background:rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.15);}
+    .social-btn.primary {background: rgba(255,255,255,0.06); color:#fff; border-color: rgba(255,255,255,0.15);}
+    .wa-btn {display:flex; align-items:center; gap:10px;}
     .wa-img {width:22px; height:22px; object-fit:contain;}
+    .social-btn {padding:14px 26px; border-radius:14px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); color:#fff; text-decoration:none; font-weight:700; transition:0.25s;}
+    .social-btn:hover {background:#25D366; color:#000;}
 
     /* CARD MENU */
     .card-container {max-width:1000px; margin:auto; padding:0 20px;}
-    .card {background:rgba(255,255,255,0.05); border-radius:18px; padding:22px; border:1px solid rgba(255,255,255,0.1); cursor:pointer; margin-bottom:16px; transition:0.25s;}
-    .card:hover {border-color:#25D366;}
-    .card-header {font-size:20px; font-weight:800; cursor:pointer;}
+    .card {background:rgba(255,255,255,0.05); border-radius:18px; padding:22px; border:1px solid rgba(255,255,255,0.1); cursor:pointer; margin-bottom:16px;}
+    .card-header {font-size:20px; font-weight:800;}
     .card-sub {margin-top:6px; opacity:0.75; font-size:14px;}
-    .card-content {max-height:0; overflow:hidden; line-height:1.6; transition:max-height 0.25s ease, padding 0.25s ease; padding:0;}
+    .card-content {max-height:0; overflow:hidden; line-height:1.6; transition:max-height 0.4s ease, padding 0.4s ease; padding:0 0;}
     .card.accordion.active .card-content {max-height:500px; padding:16px 0;}
 
     /* FOOTER */
@@ -99,8 +98,8 @@
   <!-- SOCIAL -->
   <div class="social-wrapper">
     <div class="social-top">
-      <a href="https://wa.me/628xxxxxx" target="_blank" class="social-btn">Channel Testimoni</a>
-      <a href="https://wa.me/628xxxxxx" target="_blank" class="social-btn">Channel Info Stock</a>
+      <a href="https://whatsapp.com/channel/0029VbAboBY3WHTUjWfV292s" target="_blank" class="social-btn">Channel Testimoni</a>
+      <a href="https://whatsapp.com/channel/0029VaprmvWHQbRvCR5xSt3D" target="_blank" class="social-btn">Channel Info Stock</a>
     </div>
     <div class="social-bottom">
       <a href="https://wa.me/6282261652010" class="social-btn primary wa-btn">
@@ -118,9 +117,9 @@
       <div class="card-header">All Grub JB Rioo</div>
       <div class="card-sub">Rame Dan Member Asik</div>
       <div class="card-content">
-        <a href="https://chat.whatsapp.com/Df0AUi4ACh06O1RY3DXEnF" target="_blank" class="social-btn">• JB Fish It Ziqq X Rioo V1</a>
-        <a href="https://chat.whatsapp.com/IKozsSvIqvUHb7BLNHwAaB" target="_blank" class="social-btn">• JB Fish It Rioo V2</a>
-        <a href="https://chat.whatsapp.com/DuDFfkf3XONDEx9kOsYMHt" target="_blank" class="social-btn">• Mabar The Forge Rioo</a>
+        <a href="https://chat.whatsapp.com/Df0AUi4ACh06O1RY3DXEnF" target="_blank" class="social-btn" style="display:block;margin-bottom:10px;">• JB Fish It Ziqq X Rioo V1</a>
+        <a href="https://chat.whatsapp.com/IKozsSvIqvUHb7BLNHwAaB" target="_blank" class="social-btn" style="display:block;margin-bottom:10px;">• JB Fish It Rioo V2</a>
+        <a href="https://chat.whatsapp.com/DuDFfkf3XONDEx9kOsYMHt" target="_blank" class="social-btn" style="display:block;">• Mabar The Forge Rioo</a>
       </div>
     </div>
 
@@ -154,19 +153,10 @@
   </footer>
 
   <script>
-    // Accordion cepat + link WA klik smooth
+    // Accordion slide
     document.querySelectorAll('.accordion').forEach(card => {
-      card.addEventListener('click', e => {
-        if(e.target.tagName.toLowerCase() === 'a') return; // klik link WA tetap buka WA
+      card.addEventListener('click', () => {
         card.classList.toggle('active');
-      });
-    });
-
-    // Override klik WA agar smooth, tidak menghitam
-    document.querySelectorAll('.social-btn').forEach(btn => {
-      btn.addEventListener('click', e => {
-        e.preventDefault();
-        window.open(btn.href,'_blank'); // buka WA tanpa efek highlight browser
       });
     });
   </script>
