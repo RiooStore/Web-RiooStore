@@ -54,15 +54,13 @@
 
     /* CARD MENU */
     .card-container {max-width:1000px; margin:auto; padding:0 20px;}
-    .card {background:rgba(255,255,255,0.05); border-radius:18px; padding:22px; border:1px solid rgba(255,255,255,0.1); cursor:pointer; margin-bottom:16px; transition:0.3s;}
+    .card {background:rgba(255,255,255,0.05); border-radius:18px; padding:22px; border:1px solid rgba(255,255,255,0.1); cursor:pointer; margin-bottom:16px; transition:0.25s;}
     .card:hover {border-color:#25D366;}
-    .card-header {display:flex; justify-content:space-between; align-items:center; font-size:20px; font-weight:800; cursor:pointer;}
-    .card-header:hover {background: rgba(255,255,255,0.05); transition: background 0.3s;}
+    .card-header {font-size:20px; font-weight:800; cursor:pointer;}
     .card-sub {margin-top:6px; opacity:0.75; font-size:14px;}
-    .card-content {max-height:0; overflow:hidden; line-height:1.6; transition:max-height 0.4s ease, padding 0.4s ease; padding:0 0;}
+    .card-content {max-height:0; overflow:hidden; line-height:1.6; transition:max-height 0.25s ease, padding 0.25s ease; padding:0;}
+    .card.accordion.active {background: rgba(0,123,255,0.1);} /* efek biru saat aktif */
     .card.accordion.active .card-content {max-height:500px; padding:16px 0;}
-    .arrow {transition: transform 0.3s;}
-    .card.accordion.active .arrow {transform: rotate(180deg);}
 
     /* FOOTER */
     footer {text-align:center; padding:40px 20px; opacity:0.8;}
@@ -118,10 +116,7 @@
   <!-- CARD MENU -->
   <div class="card-container">
     <div class="card accordion">
-      <div class="card-header">
-        All Grub JB Rioo
-        <span class="arrow">&#9662;</span>
-      </div>
+      <div class="card-header">All Grub JB Rioo</div>
       <div class="card-sub">Rame Dan Member Asik</div>
       <div class="card-content">
         <a href="https://chat.whatsapp.com/Df0AUi4ACh06O1RY3DXEnF" target="_blank" class="social-btn">• JB Fish It Ziqq X Rioo V1</a>
@@ -131,10 +126,7 @@
     </div>
 
     <div class="card accordion">
-      <div class="card-header">
-        List Rioo
-        <span class="arrow">&#9662;</span>
-      </div>
+      <div class="card-header">List Rioo</div>
       <div class="card-sub">Rioo Menyediakan</div>
       <div class="card-content">
         <p>• Jasa Mc / Mm</p>
@@ -144,10 +136,7 @@
     </div>
 
     <div class="card accordion">
-      <div class="card-header">
-        Testimoni
-        <span class="arrow">&#9662;</span>
-      </div>
+      <div class="card-header">Testimoni</div>
       <div class="card-sub">Road To 900 Testi</div>
       <div class="card-content">
         <p>• Big Testi Mc 700Inc ( Capitano Moby SaB )</p>
@@ -166,11 +155,10 @@
   </footer>
 
   <script>
-    // Accordion dengan pengecualian link
+    // Accordion cepat + link WA tidak menutup accordion
     document.querySelectorAll('.accordion').forEach(card => {
       card.addEventListener('click', e => {
-        // Jika klik link, jangan toggle
-        if(e.target.tagName.toLowerCase() === 'a') return;
+        if(e.target.tagName.toLowerCase() === 'a') return; // klik link WA tetap buka WA
         card.classList.toggle('active');
       });
     });
