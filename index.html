@@ -59,7 +59,7 @@
     .card-header {font-size:20px; font-weight:800;}
     .card-sub {margin-top:6px; opacity:0.75; font-size:14px;}
     .card-content {max-height:0; overflow:hidden; line-height:1.6; transition:max-height 0.25s ease, padding 0.25s ease; padding:0 0;}
-    .card.accordion.active .card-content {padding:16px 0;}
+    .card.accordion.active .card-content {padding:16px 0;} /* max-height diset lewat JS */
 
     /* FOOTER */
     footer {text-align:center; padding:40px 20px; opacity:0.8;}
@@ -154,15 +154,17 @@
   </footer>
 
   <script>
-    // Accordion smooth animasi
+    // Accordion smooth + full height
     document.querySelectorAll('.accordion').forEach(card => {
       const content = card.querySelector('.card-content');
       card.addEventListener('click', e => {
-        if(e.target.tagName.toLowerCase() === 'a') return; // klik link WA langsung buka WA
+        // Klik link WA jangan toggle
+        if(e.target.tagName.toLowerCase() === 'a') return;
+
         if(card.classList.contains('active')){
           content.style.maxHeight = '0px';
         } else {
-          content.style.maxHeight = content.scrollHeight + 'px';
+          content.style.maxHeight = content.scrollHeight + 'px'; // tinggi konten otomatis
         }
         card.classList.toggle('active');
       });
