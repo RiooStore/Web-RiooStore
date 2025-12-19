@@ -113,14 +113,18 @@ footer {
   gap: 8px;
 }
 
-.nav-logo,
+.nav-logo-img {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #25D366;
+}
+
 .nav-brand {
-  background: #ffffff;
-  color: #000;
-  padding: 4px 10px;
-  border-radius: 10px;
-  font-size: 13px;
-  font-weight: 600;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .nav-right {
@@ -164,21 +168,19 @@ footer {
   <!-- NAVBAR -->
   <nav class="navbar">
     <div class="nav-left">
-      <div class="nav-logo">logo</div>
+      <img src="logo.jpg" class="nav-logo-img" alt="Logo" />
       <div class="nav-brand">RiooStore</div>
     </div>
     <div class="nav-right">
-      <a href="#" class="nav-btn">home</a>
-      <a href="https://github.com/" target="_blank" class="nav-btn">+ github</a>
+      <a href="#top" class="nav-btn">Home</a>
+      <a href="https://github.com/USERNAME" target="_blank" class="nav-btn">GitHub</a>
     </div>
   </nav>  <div class="container">
     <!-- HERO IMAGE -->
     <div class="hero">
       <img src="banner.jpg" alt="Banner RiooStore" />
     </div><!-- AVATAR -->
-<div class="avatar">
-  <img src="logo.jpg" alt="RiooStore Logo" />
-</div>
+
 
 <div class="brand">RiooStore <span class="badge">Official</span></div>
 <div class="desc">Stay Amanah And Trusted</div>
