@@ -79,13 +79,19 @@
       color: #000;
     }
 
-    /* ===== SECTION TITLE ===== */
+    /* ===== HERO (TITLE + BANNER) ===== */
+    .hero-section {
+      max-width: 1100px;
+      margin: 30px auto 0;
+      padding: 0 20px;
+      text-align: center;
+    }
+
     .section-title {
-  text-align: center;
-  margin: 20px 0 18px; /* kasih jarak sehat ke banner */
-  font-size: 40px;
-  font-weight: 900;
-}
+      font-size: 40px;
+      font-weight: 900;
+      margin-bottom: 20px; /* JARAK SEHAT KE BANNER */
+    }
 
     .badge {
       display: inline-block;
@@ -97,26 +103,21 @@
       background: linear-gradient(135deg, #7c3aed, #9333ea);
     }
 
-    .divider {
-  width: 80%;
-  max-width: 900px;
-  margin: 28px auto;
-  height: 2px;
-  background: linear-gradient(to right, transparent, #666, transparent);
-  border: none;
-}
-
-    /* ===== BANNER ===== */
-    .banner {
-      max-width: 1100px;
-      margin: 0 auto 20px;
-      padding: 0 20px;
-    }
-
     .banner img {
       width: 100%;
       border-radius: 22px;
       border: 1px solid rgba(255,255,255,0.1);
+      display: block;
+    }
+
+    /* ===== DIVIDER ===== */
+    .divider {
+      width: 80%;
+      max-width: 900px;
+      margin: 30px auto;
+      height: 2px;
+      background: linear-gradient(to right, transparent, #666, transparent);
+      border: none;
     }
 
     /* ===== SOCIAL ===== */
@@ -177,43 +178,3 @@
       .section-title { font-size: 32px; }
     }
   </style></head>
-<body id="top">  <!-- NAVBAR -->  <nav class="navbar">
-    <div class="nav-container">
-      <div class="nav-left">
-        <img src="logo.jpg" class="nav-logo" />
-        <div class="nav-title">RiooStore</div>
-      </div>
-      <div class="nav-right">
-        <a href="#top" class="nav-btn">Home</a>
-        <a href="https://github.com/RiooStore" target="_blank" class="nav-btn">GitHub</a>
-      </div>
-    </div>
-  </nav>  <!-- TITLE -->  <div class="hero-section">
-  <h1 class="section-title">RiooStore <span class="badge">Official</span></h1>
-  <div class="banner">
-    <img src="banner.jpg" alt="RiooStore Banner" />
-  </div>
-</div>
-</div><hr class="divider" /><!-- SOCIAL -->  <div class="banner">
-    <img src="banner.jpg" alt="RiooStore Banner" />
-  </div>  <hr class="divider" />  <!-- SOCIAL -->  <div class="social-section">
-    <a href="https://wa.me/6282261652010" class="social-btn">WhatsApp</a>
-    <a href="#" class="social-btn">Channel WhatsApp</a>
-  </div>  <hr class="divider" />  <!-- CARD MENU -->  <div class="card-container">
-    <div class="card">
-      <h3>WhatsApp Bot</h3>
-      <p>Layanan bot otomatis</p>
-    </div>
-    <div class="card">
-      <h3>Testimoni</h3>
-      <p>Road To 900 Testi</p>
-    </div>
-    <div class="card">
-      <h3>Contact Admin</h3>
-      <p>Fast Response</p>
-    </div>
-  </div>  <hr class="divider" />  <!-- FOOTER -->  <footer>
-    <p>Supported By</p>
-    <strong>RiooStore || Road To 900 Testi</strong>
-  </footer></body>
-</html>
