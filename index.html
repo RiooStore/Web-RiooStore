@@ -21,9 +21,15 @@ body{
 }
 
 /* NAVBAR */
-.navbar{position:sticky;top:0;z-index:999;padding:12px;}
+.navbar{
+  position:sticky;
+  top:0;
+  z-index:50;
+  padding:12px;
+}
 .nav-container{
-  max-width:1100px;margin:auto;
+  max-width:1100px;
+  margin:auto;
   background:rgba(20,20,20,.85);
   backdrop-filter:blur(12px);
   border-radius:18px;
@@ -41,15 +47,17 @@ body{
 .nav-title{font-size:24px;font-weight:900;}
 .nav-right{display:flex;gap:14px;align-items:center;}
 .nav-btn{
-  padding:14px 28px;border-radius:14px;
+  padding:14px 28px;
+  border-radius:14px;
   background:rgba(255,255,255,.06);
-  color:#fff;font-weight:700;
+  color:#fff;
+  font-weight:700;
   text-decoration:none;
   border:1px solid rgba(255,255,255,.15);
 }
 .nav-btn:hover{background:#25D366;color:#000;}
 
-/* DOT MENU */
+/* DOT BUTTON */
 .dot-btn{
   width:46px;height:46px;
   border-radius:14px;
@@ -124,25 +132,53 @@ body{
   padding-top:16px;
 }
 
-/* SIDE MENU */
+/* OVERLAY & SIDE MENU */
 .overlay{
-  position:fixed;inset:0;
-  background:rgba(0,0,0,.5);
-  opacity:0;pointer-events:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.6);
+  opacity:0;
+  pointer-events:none;
   transition:.3s;
+  z-index:998;
 }
-.overlay.active{opacity:1;pointer-events:auto;}
+.overlay.active{
+  opacity:1;
+  pointer-events:auto;
+}
+
 .side-menu{
-  position:fixed;top:0;right:-320px;
-  width:300px;height:100vh;
+  position:fixed;
+  top:0;
+  right:-320px;
+  width:300px;
+  height:100vh;
   background:#0b0b0b;
   padding:20px;
   transition:.3s;
+  z-index:999;
 }
 .side-menu.active{right:0;}
+
+.side-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:20px;
+  font-weight:800;
+}
+
+.close-btn{
+  cursor:pointer;
+  font-size:22px;
+}
+
 .side-menu a{
-  display:block;margin-top:20px;
-  color:#fff;text-decoration:none;font-weight:700;
+  display:block;
+  margin-top:20px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
 }
 
 footer{text-align:center;padding:40px 20px;opacity:.8;}
@@ -184,12 +220,8 @@ footer{text-align:center;padding:40px 20px;opacity:.8;}
 <!-- SOCIAL -->
 <div class="social-wrapper">
   <div class="social-top">
-    <a href="https://whatsapp.com/channel/0029VbAboBY3WHTUjWfV292s" target="_blank" class="social-btn">
-      Channel Testimoni
-    </a>
-    <a href="https://whatsapp.com/channel/0029VaprmvWHQbRvCR5xSt3D" target="_blank" class="social-btn">
-      Channel Info Stock
-    </a>
+    <a href="https://whatsapp.com/channel/0029VbAboBY3WHTUjWfV292s" target="_blank" class="social-btn">Channel Testimoni</a>
+    <a href="https://whatsapp.com/channel/0029VaprmvWHQbRvCR5xSt3D" target="_blank" class="social-btn">Channel Info Stock</a>
   </div>
   <div class="social-bottom">
     <a href="https://wa.me/6282261652010" target="_blank" class="social-btn wa-btn">
@@ -204,27 +236,16 @@ footer{text-align:center;padding:40px 20px;opacity:.8;}
 <!-- CARD MENU -->
 <div class="card-container">
 
-  <!-- ALL GRUB -->
   <div class="card accordion">
     <div class="card-header">All Grub JB Rioo</div>
     <div class="card-sub">Rame Dan Member Asik</div>
     <div class="card-content">
-      <a href="https://chat.whatsapp.com/Df0AUi4ACh06O1RY3DXEnF" target="_blank"
-         class="social-btn" style="display:block;margin-bottom:10px;">
-        • JB Fish It Ziqq X Rioo V1
-      </a>
-      <a href="https://chat.whatsapp.com/IKozsSvIqvUHb7BLNHwAaB" target="_blank"
-         class="social-btn" style="display:block;margin-bottom:10px;">
-        • JB Fish It Rioo V2
-      </a>
-      <a href="https://chat.whatsapp.com/DuDFfkf3XONDEx9kOsYMHt" target="_blank"
-         class="social-btn" style="display:block;">
-        • Mabar The Forge Rioo
-      </a>
+      <a href="https://chat.whatsapp.com/Df0AUi4ACh06O1RY3DXEnF" target="_blank" class="social-btn" style="display:block;margin-bottom:10px;">• JB Fish It Ziqq X Rioo V1</a>
+      <a href="https://chat.whatsapp.com/IKozsSvIqvUHb7BLNHwAaB" target="_blank" class="social-btn" style="display:block;margin-bottom:10px;">• JB Fish It Rioo V2</a>
+      <a href="https://chat.whatsapp.com/DuDFfkf3XONDEx9kOsYMHt" target="_blank" class="social-btn" style="display:block;">• Mabar The Forge Rioo</a>
     </div>
   </div>
 
-  <!-- LIST RIOO -->
   <div class="card accordion">
     <div class="card-header">List Rioo</div>
     <div class="card-sub">Rioo Menyediakan</div>
@@ -235,7 +256,6 @@ footer{text-align:center;padding:40px 20px;opacity:.8;}
     </div>
   </div>
 
-  <!-- TESTIMONI -->
   <div class="card accordion">
     <div class="card-header">Testimoni</div>
     <div class="card-sub">Road To 900 Testi</div>
@@ -255,17 +275,22 @@ footer{text-align:center;padding:40px 20px;opacity:.8;}
 <!-- SIDE MENU -->
 <div class="overlay" id="overlay"></div>
 <div class="side-menu" id="sideMenu">
+  <div class="side-header">
+    Menu
+    <span class="close-btn" id="closeMenu">✕</span>
+  </div>
   <a href="https://github.com/RiooStore" target="_blank">GitHub Rioo</a>
 </div>
 
 <script>
 document.querySelectorAll('.accordion').forEach(card=>{
-  card.querySelector('.card-header').addEventListener('click',()=>{
+  card.querySelector('.card-header').onclick=()=>{
     card.classList.toggle('active');
-  });
+  }
 });
 
 const openMenu=document.getElementById('openMenu');
+const closeMenu=document.getElementById('closeMenu');
 const sideMenu=document.getElementById('sideMenu');
 const overlay=document.getElementById('overlay');
 
@@ -273,10 +298,12 @@ openMenu.onclick=()=>{
   sideMenu.classList.add('active');
   overlay.classList.add('active');
 }
-overlay.onclick=()=>{
+function closeSide(){
   sideMenu.classList.remove('active');
   overlay.classList.remove('active');
 }
+closeMenu.onclick=closeSide;
+overlay.onclick=closeSide;
 </script>
 
 </body>
