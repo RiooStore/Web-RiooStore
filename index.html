@@ -93,6 +93,7 @@
       border-radius:22px;
       border:1px solid rgba(255,255,255,0.1);
       object-fit:cover;
+      display:block;
     }
 
     /* DIVIDER */
@@ -143,17 +144,30 @@
       padding:22px;
       border:1px solid rgba(255,255,255,0.1);
       margin-bottom:16px;
+
+      /* HILANGKAN TAP HIGHLIGHT BIRU */
+      -webkit-tap-highlight-color: transparent;
+      user-select:none;
     }
+
     .card-header {
       font-size:20px;
       font-weight:800;
       cursor:pointer;
+      outline:none;
     }
+
+    .card-header:active {
+      opacity:0.85;
+      transform:scale(0.99);
+    }
+
     .card-sub {
       margin-top:6px;
       opacity:0.75;
       font-size:14px;
     }
+
     .card-content {
       max-height:0;
       overflow:hidden;
@@ -161,6 +175,7 @@
       padding:0;
       transition:max-height 0.25s ease, padding 0.25s ease;
     }
+
     .card.active .card-content {
       max-height:500px;
       padding:16px 0;
