@@ -120,7 +120,7 @@ body{
   transition:max-height .4s ease,padding .4s ease;
 }
 .card.active .card-content{
-  max-height:500px;
+  max-height:600px;
   padding-top:16px;
 }
 
@@ -184,11 +184,15 @@ footer{text-align:center;padding:40px 20px;opacity:.8;}
 <!-- SOCIAL -->
 <div class="social-wrapper">
   <div class="social-top">
-    <a href="https://whatsapp.com/channel/0029VbAboBY3WHTUjWfV292s" class="social-btn">Channel Testimoni</a>
-    <a href="https://whatsapp.com/channel/0029VaprmvWHQbRvCR5xSt3D" class="social-btn">Channel Info Stock</a>
+    <a href="https://whatsapp.com/channel/0029VbAboBY3WHTUjWfV292s" target="_blank" class="social-btn">
+      Channel Testimoni
+    </a>
+    <a href="https://whatsapp.com/channel/0029VaprmvWHQbRvCR5xSt3D" target="_blank" class="social-btn">
+      Channel Info Stock
+    </a>
   </div>
   <div class="social-bottom">
-    <a href="https://wa.me/6282261652010" class="social-btn wa-btn">
+    <a href="https://wa.me/6282261652010" target="_blank" class="social-btn wa-btn">
       <img src="whatsapp.jpg" class="wa-img">
       WhatsApp Rioo
     </a>
@@ -205,9 +209,18 @@ footer{text-align:center;padding:40px 20px;opacity:.8;}
     <div class="card-header">All Grub JB Rioo</div>
     <div class="card-sub">Rame Dan Member Asik</div>
     <div class="card-content">
-      <a href="#" class="social-btn" style="display:block;margin-bottom:10px;">• JB Fish It Ziqq X Rioo V1</a>
-      <a href="#" class="social-btn" style="display:block;margin-bottom:10px;">• JB Fish It Rioo V2</a>
-      <a href="#" class="social-btn" style="display:block;">• Mabar The Forge Rioo</a>
+      <a href="https://chat.whatsapp.com/Df0AUi4ACh06O1RY3DXEnF" target="_blank"
+         class="social-btn" style="display:block;margin-bottom:10px;">
+        • JB Fish It Ziqq X Rioo V1
+      </a>
+      <a href="https://chat.whatsapp.com/IKozsSvIqvUHb7BLNHwAaB" target="_blank"
+         class="social-btn" style="display:block;margin-bottom:10px;">
+        • JB Fish It Rioo V2
+      </a>
+      <a href="https://chat.whatsapp.com/DuDFfkf3XONDEx9kOsYMHt" target="_blank"
+         class="social-btn" style="display:block;">
+        • Mabar The Forge Rioo
+      </a>
     </div>
   </div>
 
@@ -239,6 +252,7 @@ footer{text-align:center;padding:40px 20px;opacity:.8;}
   <strong>RiooStore | Road To 900 Testi</strong>
 </footer>
 
+<!-- SIDE MENU -->
 <div class="overlay" id="overlay"></div>
 <div class="side-menu" id="sideMenu">
   <a href="https://github.com/RiooStore" target="_blank">GitHub Rioo</a>
@@ -246,9 +260,9 @@ footer{text-align:center;padding:40px 20px;opacity:.8;}
 
 <script>
 document.querySelectorAll('.accordion').forEach(card=>{
-  card.querySelector('.card-header').onclick=()=>{
+  card.querySelector('.card-header').addEventListener('click',()=>{
     card.classList.toggle('active');
-  }
+  });
 });
 
 const openMenu=document.getElementById('openMenu');
