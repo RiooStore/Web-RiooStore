@@ -57,7 +57,13 @@
     .card {background:rgba(255,255,255,0.05); border-radius:18px; padding:22px; border:1px solid rgba(255,255,255,0.1); cursor:pointer; margin-bottom:16px;}
     .card-header {font-size:20px; font-weight:800;}
     .card-sub {margin-top:6px; opacity:0.75; font-size:14px;}
-    .card-content {max-height:0; overflow:hidden; line-height:1.6; transition:max-height 0.4s ease, padding 0.4s ease; padding:0 0;}
+    .card-content {
+  max-height:0;
+  overflow:hidden;
+  line-height:1.6;
+  transition: max-height 0.25s ease, padding 0.25s ease;
+  padding:0 0;
+}
     .card.accordion.active .card-content {max-height:500px; padding:16px 0;}
 
     /* FOOTER */
